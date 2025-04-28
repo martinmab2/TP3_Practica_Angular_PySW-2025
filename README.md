@@ -11,11 +11,8 @@ Este repositorio contiene la implementación de un trabajo práctico de Angular 
 - **Profesores a Cargo:**
 
 - Ing. Alfredo Rolando Espinoza
-- Prof. X
-- Prof. Y
-
-
-
+- Prof. Angel Casasola
+- Prof. Pablo Gudiño
 
 
 ## Objetivo del Trabajo Práctico
