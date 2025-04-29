@@ -1,9 +1,12 @@
-<div id="carouselExampleDark" class="carousel carousel-dark slide m-5">
-    <div class="text-center mb-5">
-        <h2>Slide de Noticias Interesantes</h2>
-    </div>
-    <!-- Indicadores dinámicos -->
-    <div class="carousel-indicators">
+<div class="container py-5">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide shadow rounded">
+      <div class="text-center mb-4">
+        <h2 class="display-4 fw-bold">Slide de Noticias Interesantes</h2>
+        <hr class="my-4 mx-auto w-25">
+      </div>
+      
+      <!-- Indicadores dinámicos -->
+      <div class="carousel-indicators">
         <button *ngFor="let noticia of noticias; let i = index" 
                 type="button" 
                 data-bs-target="#carouselExampleDark" 
@@ -12,32 +15,39 @@
                 [attr.aria-current]="i === 0 ? 'true' : null" 
                 [attr.aria-label]="'Slide ' + (i + 1)">
         </button>
-    </div>
-    <!-- Contenido del carrusel -->
-    <div class="carousel-inner mt-5">
+      </div>
+      
+      <!-- Contenido del carrusel -->
+      <div class="carousel-inner rounded">
         <div *ngFor="let noticia of noticias; let i = index" 
              class="carousel-item" 
              [class.active]="i === 0" 
              data-bs-interval="3000">
+          <div class="position-relative">
             <img [src]="noticia.imagen" 
                  class="d-block w-100" 
                  [alt]="noticia.titulo"
                  style="max-height: 600px; object-fit: cover;">
-            <div class="carousel-caption d-none d-md-block text-dark">
-                <h3>{{noticia.titulo}}</h3>
-                <p>{{noticia.descripcion}}</p>
-                <p>Fecha: {{noticia.fecha}}</p>
-                <p>Categoría: {{noticia.categoria}}</p>
+            <div class="carousel-caption d-none d-md-block bg-light bg-opacity-75 rounded p-3 text-dark">
+              <h3 class="fw-bold">{{noticia.titulo}}</h3>
+              <p class="lead">{{noticia.descripcion}}</p>
+              <div class="d-flex justify-content-between">
+                <span class="badge bg-primary">Fecha: {{noticia.fecha}}</span>
+                <span class="badge bg-secondary">Categoría: {{noticia.categoria}}</span>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    <!-- Controles de navegación -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      </div>
+      
+      <!-- Controles de navegación -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
-    </button>
-</div>
+      </button>
+    </div>
+  </div>
