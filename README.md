@@ -2,6 +2,14 @@
 
 Este repositorio contiene la solución al Trabajo Práctico N°3 de la asignatura **Programación y Servicios Web** de la Facultad de Ingeniería, Universidad Nacional de Jujuy. El objetivo es aplicar conceptos fundamentales de Angular mediante el desarrollo de una aplicación web modular, interactiva y profesionalmente diseñada.
 
+# 📌 Estado de Tareas en el Proyecto Angular 19
+
+| #  | Ejercicio                            | Estado       |
+|----|--------------------------------------|-------------|
+| 1  | Slide de Noticias con Bootstrap y TypeScript | ✅ Completado |
+| 2  | Lista de productos, Carrito de compras, y modal | ⏳ En progreso |
+| 3  | Implementacion de un juego del ahorcadito | 🔄 Pendiente |
+
 ## Tabla de Contenidos
 
 - [Descripción General](#descripción-general)
