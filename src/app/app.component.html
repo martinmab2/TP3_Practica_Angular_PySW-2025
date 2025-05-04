@@ -1,6 +1,14 @@
 <app-header> </app-header>
-<main>
-  <router-outlet></router-outlet>
-  
-</main>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Contenido principal (main) -->
+    <main class="col-md-9 mx-5 col-sm-12">
+      <router-outlet></router-outlet>
+    </main>
+    <!-- Barra lateral -->
+    <aside class="col-md-2">
+      <app-section-enlaces></app-section-enlaces>
+    </aside>
+  </div>
+</div>
 <app-footer> </app-footer>
