@@ -1,0 +1,26 @@
+<div class="container my-5">
+    <div class="row d-flex align-items-stretch">
+        <h2 class="text-center mb-4">Productos de Interes</h2>
+        <div class="col-md-6 col-lg-4" *ngFor="let producto of productos">
+            <div class="card shadow-sm m-2">
+                <div class="ratio ratio-16x9">
+                    <img [src]="producto.imagen" class="card-img-top img-fluid" alt="{{ producto.nombre }}">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ producto.nombre }}</h5>
+                    <p class="card-text text-muted"><strong>Categoría:</strong> {{ producto.categoria }}</p>
+                    <p class="card-text">{{ producto.descripcion }}</p>
+                    <p class="card-text"><strong>Precio:</strong> ${{ producto.precio }}</p>
+                    <p class="card-text"><strong>Stock disponible:</strong> {{ producto.stock }} unidades</p>
+                    <p class="card-text"><strong>Vendedor:</strong> {{ producto.vendedor }}</p>
+                    <p class="card-text"><strong>Calificación:</strong> ⭐⭐⭐⭐☆ ({{ producto.calificacion }})</p>
+                    <a href="#" class="btn btn-primary w-100">Agregar al Carrito</a>
+                </div>
+                <div class="card-footer text-muted text-center">
+                    Agregado el: {{ producto.fechaAgregado }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
