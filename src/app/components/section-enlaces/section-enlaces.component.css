@@ -1,0 +1,27 @@
+aside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-link {
+    font-weight: bold;
+    color: #007bff; /* Color de texto normal */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    background-color: darkslategrey; /* Color de fondo en hover */
+    color: white; /* Cambio de color de texto para mejor contraste */
+    border-radius: 5px; /* Bordes redondeados opcionales */
+  }  
+  
+  h4 {
+    text-align: center;
+  }
+  
