@@ -9,9 +9,9 @@ Este repositorio contiene la solución al Trabajo Práctico N°3 de la asignatur
 | 1  | Slide de Noticias con Bootstrap y TypeScript | ✅ Completado |
 | 2  | Lista de productos, Carrito de compras, y modal | ✅ Completado |
 | 3  | Implementacion de un juego del ahorcadito | ✅ Completado |
-| 4  | Implementacion de un juego del ahorcadito | ⏳ En progreso |   
+| 4  | Implementacion de un servicio de Boleteria | ✅ Completado |   
 
-## Progreso total **87,5%**
+## Progreso total **93,5%**
 
 ## Tabla de Contenidos
 
