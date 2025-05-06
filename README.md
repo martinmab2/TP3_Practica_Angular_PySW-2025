@@ -38,6 +38,7 @@ noticias = [
   { titulo: 'Noticia 1', descripcion: 'Descripción 1', img: 'noticia1.jpg' },
   { titulo: 'Noticia 2', descripcion: 'Descripción 2', img: 'noticia2.jpg' },
 ];
+```
 
 ### 2. Lista de Productos Destacados
 
