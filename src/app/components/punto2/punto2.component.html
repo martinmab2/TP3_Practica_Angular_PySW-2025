@@ -1,6 +1,11 @@
-<div class="container my-5">
+<div class="container m-5">
     <div class="row d-flex align-items-stretch">
-        <h2 class="text-center mb-4">Productos de Interes</h2>
+        <h2 class="text-center">Productos de Interes</h2>
+        <div class="text-center">
+            <button class="btn btn-success my-2" data-bs-toggle="modal" data-bs-target="#modalCarrito">
+                <i class="bi bi-cart"></i> Ver Carrito
+            </button>
+        </div>
         <div class="col-md-6 col-lg-4" *ngFor="let producto of productos">
             <div class="card shadow-sm m-2">
                 <div class="ratio ratio-16x9">
@@ -13,8 +18,9 @@
                     <p class="card-text"><strong>Precio:</strong> ${{ producto.precio }}</p>
                     <p class="card-text"><strong>Stock disponible:</strong> {{ producto.stock }} unidades</p>
                     <p class="card-text"><strong>Vendedor:</strong> {{ producto.vendedor }}</p>
-                    <p class="card-text"><strong>Calificación:</strong> ⭐⭐⭐⭐☆ ({{ producto.calificacion }})</p>
-                    <a href="#" class="btn btn-primary w-100">Agregar al Carrito</a>
+                    <button class="btn btn-primary w-100" (click)="agregarAlCarrito(producto)">
+                        <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                    </button>
                 </div>
                 <div class="card-footer text-muted text-center">
                     Agregado el: {{ producto.fechaAgregado }}
@@ -23,4 +29,32 @@
         </div>
     </div>
 </div>
+  <!-- Modal de Bootstrap para mostrar el carrito -->
+  <div class="modal fade" id="modalCarrito" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Carrito de Compras</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+            <div *ngIf="carrito.length > 0">
+              <ul>
+                <li *ngFor="let item of carrito">
+                  {{ item.nombre }} - ${{ item.precio }}
+                </li>
+              </ul>
+              <p *ngIf="carrito.length > 0"><strong>Total:</strong> {{ getTotal() }}</p>
 
+            </div>
+            <div *ngIf="carrito.length === 0">
+              <p>No hay productos en el carrito.</p>
+            </div>
+          </div>
+          
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>

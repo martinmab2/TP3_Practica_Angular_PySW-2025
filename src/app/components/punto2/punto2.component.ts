@@ -9,7 +9,6 @@ interface Producto {
   stock: number;
   fechaAgregado: string;
   vendedor: string;
-  calificacion: number;
   comentarios: string[];
   enOferta: boolean;
 }
@@ -40,7 +39,6 @@ export class Punto2Component {
       stock: 50,
       fechaAgregado: "2025-04-28",
       vendedor: "TechStore",
-      calificacion: 4.5,
       comentarios: ["Excelente producto", "Muy buenas fotos!"],
       enOferta: false
     },
@@ -53,7 +51,6 @@ export class Punto2Component {
       stock: 7,
       fechaAgregado: "2024-10-18",
       vendedor: "Avon",
-      calificacion: 4.5,
       comentarios: ["Buen producto", "Me encanta"],
       enOferta: true
     },
@@ -66,7 +63,6 @@ export class Punto2Component {
       stock: 100,
       fechaAgregado: "2025-07-30",
       vendedor: "Rolex",
-      calificacion: 4.5,
       comentarios: ["Excelente producto", "Muy elegante"],
       enOferta: false
     },
@@ -79,7 +75,6 @@ export class Punto2Component {
       stock: 20,
       fechaAgregado: "2023-01-12",
       vendedor: "SewingStore",
-      calificacion: 4.5,
       comentarios: ["Excelente producto", "Muy útil"],
       enOferta: true
     },
@@ -92,7 +87,6 @@ export class Punto2Component {
       stock: 30,
       fechaAgregado: "2025-03-15",
       vendedor: "AudioStore",
-      calificacion: 4.5,
       comentarios: ["Excelente sonido", "Muy cómodos"],
       enOferta: false
     },
@@ -105,7 +99,6 @@ export class Punto2Component {
       stock: 50,
       fechaAgregado: "2025-04-28",
       vendedor: "Apple",
-      calificacion: 4.5,
       comentarios: ["Excelente telefono", "Muy rápido"],
       enOferta: true
     },
@@ -118,7 +111,6 @@ export class Punto2Component {
       stock: 13,
       fechaAgregado: "2025-12-8",
       vendedor: "SmartWatch",
-      calificacion: 4.5,
       comentarios: ["Excelente reloj", "Muy útil"],
       enOferta: false
     },
@@ -131,7 +123,6 @@ export class Punto2Component {
       stock: 150,
       fechaAgregado: "2021-3-8",
       vendedor: "Panasonic",
-      calificacion: 4.5,
       comentarios: ["Muy jugable", "Me encanta"],
       enOferta: true
     },
@@ -144,9 +135,19 @@ export class Punto2Component {
       stock: 950,
       fechaAgregado: "2025-9-28",
       vendedor: "AudioStore",
-      calificacion: 4.5,
       comentarios: ["Muy buen sonido", "Ideal para grabaciones"],
       enOferta: false
     }
   ]
+  carrito: any[] = []; // Array para el carrito
+
+  agregarAlCarrito(producto: Producto) {
+    // Clonar el objeto para evitar modificaciones en el array original
+    this.carrito.push({ ...producto });
+    console.log('Producto agregado:', producto);
+  }
+  getTotal(): number {
+    return this.carrito.reduce((acc, p) => acc + p.precio, 0);
+  }
+  
 }
