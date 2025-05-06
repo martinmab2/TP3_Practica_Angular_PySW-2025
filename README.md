@@ -32,42 +32,19 @@ El proyecto consiste en una aplicación Angular que integra múltiples component
 - **Funcionalidad:** Carrusel dinámico que muestra noticias con título, descripción e imagen. Navegación mediante botones.
 - **Datos:** Array de objetos en el controlador.
 - **Estilo:** Bootstrap para diseño responsivo.
->>>>>>> 88d08a8 (Esqueleto de proyecto y componentes header & footer)
 
 ```typescript
 noticias = [
   { titulo: 'Noticia 1', descripcion: 'Descripción 1', img: 'noticia1.jpg' },
   { titulo: 'Noticia 2', descripcion: 'Descripción 2', img: 'noticia2.jpg' },
 ];
-```
 
-<<<<<<< HEAD
-
-
-
-
-- **Estilo y Diseño:** Maquetado utilizando **Bootstrap CSS** para lograr una interfaz atractiva y responsiva.
-
-
-### **Punto 2: Lista de Productos Destacados**
-
-- **Descripción:**
-
-- Muestra una lista en formato de *cards* con productos destacados. Cada producto incluye un nombre, descripción, precio e imagen asociada.
-- Incluye un botón para "Agregar al carrito", que actualiza una lista de productos seleccionados. El carrito puede visualizarse en un **modal** junto con el cálculo del total.
-
-
-
-- **Fuente de Datos:**
-
-- Los productos se almacenan en un array predefinido. Ejemplo:
-=======
 ### 2. Lista de Productos Destacados
 
 - **Funcionalidad:** Cards de productos con nombre, descripción, precio e imagen. Botón para agregar al carrito y visualización en modal con total.
 - **Datos:** Array predefinido de productos.
 - **Estilo:** Bootstrap y CSS para cards y modal.
->>>>>>> 88d08a8 (Esqueleto de proyecto y componentes header & footer)
+
 
 ```typescript
 productos = [
@@ -76,52 +53,19 @@ productos = [
 ];
 ```
 
-<<<<<<< HEAD
-
-
-
-
 - **Estilo y Diseño:** Uso intensivo de **Bootstrap y CSS** para estilizar las vistas de producto y el modal.
 
 
-### **Punto 3: Juego del Ahorcado**
-
-- **Descripción:**
-
-- Este componente implementa el clásico **Juego del Ahorcado**. El usuario intenta adivinar una palabra seleccionada aleatoriamente de una lista predefinida.
-- La categoría de las palabras (por ejemplo: Animales, Actores Argentinos) es visible en la pantalla.
-- El estado del juego se muestra mediante imágenes que reflejan el progreso del "ahorcado".
-
-
-
-- **Reglas del Juego:**
-
-- El jugador tiene un número limitado de intentos (por ejemplo, 5).
-- Cada letra correcta se guarda y se compara con la palabra objetivo.
-- Si el jugador pierde (intentos = 0), se muestra un modal de derrota.
-- Si el jugador gana, se felicita mediante un modal.
-
-
-
-- **Fuente de Datos:**
-
-- Las palabras se almacenan en un array. Ejemplo:
-=======
 ### 3. Juego del Ahorcado
 
 - **Funcionalidad:** Juego clásico con selección aleatoria de palabras y categorías, visualización de progreso e intentos, y modales de victoria/derrota.
 - **Datos:** Array de palabras y categorías.
 - **Reglas:** 5 intentos, comparación de letras, feedback visual y modal.
 - **Estilo:** Bootstrap, CSS y servicios Angular.
->>>>>>> 88d08a8 (Esqueleto de proyecto y componentes header & footer)
 
 ```typescript
 palabras = ['Perro', 'Gato', 'Elefante', 'Caballo'];
 ```
-
-<<<<<<< HEAD
-
-- **Estilo y Diseño:** Se utilizan **Bootstrap**, **CSS** y **Services de Angular** para una arquitectura modular y dinámica.
 
 
 ## Tecnologías Utilizadas
@@ -160,15 +104,12 @@ npm install
 ng serve
 ```
 
-
 4. **Abre tu navegador y ve a:** `http://localhost:4200`
-
 
 ## Autor
 
 - Martín Alejandro Bonari
 
-=======
 ## Tecnologías Utilizadas
 
 - **Angular CLI** – Framework principal.
@@ -271,4 +212,3 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
->>>>>>> 88d08a8 (Esqueleto de proyecto y componentes header & footer)
