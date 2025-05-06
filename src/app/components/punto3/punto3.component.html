@@ -14,7 +14,7 @@
         <div class="btn-group flex-wrap" role="group">
           <button 
             *ngFor="let key of categoryKeys" 
-            class="btn mx-1 mb-2" 
+            class="btn mx-1 mb-5" 
             [class.btn-primary]="key === selectedCategoryKey"
             [class.btn-outline-primary]="key !== selectedCategoryKey"
             (click)="selectCategory(key)">
@@ -46,7 +46,7 @@
           [disabled]="gameOver || gameWon">
         <button class="btn btn-primary" (click)="guessLetter()">Adivinar</button>
       </div>
-      <div class="wrong-letters mt-4">
+      <div class="wrong-letters my-5">
         <h4>Letras incorrectas:</h4>
         <span *ngFor="let letter of wrongLetters" class="wrong-letter">{{ letter }}</span>
       </div>
